@@ -23,6 +23,7 @@ mongoose.connect(mongoUrl)
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static('build'))
 
 app.get('/', (request, response) => {
   request.send('<h1>Welcome to the blog backend!</h1>')
